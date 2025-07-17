@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #FAFAFA; /* gray-50 */
+    --color-foreground: #212121; /* gray-900 */
+    --color-border: #E0E0E0; /* gray-300 */
+    --color-input: #FFFFFF; /* white */
+    --color-ring: #1565C0; /* blue-800 */
+    
+    /* Card & Surface Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #212121; /* gray-900 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #212121; /* gray-900 */
+    
+    /* Muted Colors */
+    --color-muted: #F5F5F5; /* gray-100 */
+    --color-muted-foreground: #616161; /* gray-600 */
+    
+    /* Primary Brand Colors */
+    --color-primary: #1565C0; /* blue-800 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #37474F; /* blue-gray-700 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #FF6F00; /* orange-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Status Colors */
+    --color-success: #2E7D32; /* green-800 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #F57C00; /* amber-600 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #C62828; /* red-800 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #C62828; /* red-800 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Shadow Variables */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-default: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    
+    /* Animation Variables */
+    --transition-fast: 150ms ease-out;
+    --transition-default: 200ms ease-out;
+    --transition-slow: 300ms ease-out;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Typography Base Styles */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  body, p, span, div {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  .font-data {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--color-muted);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-muted-foreground);
+  }
+}
+
+@layer components {
+  /* Navigation Components */
+  .nav-item {
+    @apply relative flex items-center px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-150;
+  }
+.nav-item.active  {
+    @apply text-primary;
+  }
+.nav-item:hover  {
+    
+  }
+  
+  /* Data Table Styles */
+  .data-table {
+    @apply font-data text-sm;
+  }
+  
+  .data-cell {
+    @apply px-3 py-2 border-b border-border;
+  }
+  
+  /* Status Indicators */
+.status-positive  {
+    @apply text-success px-2 py-1 rounded-sm text-xs font-medium;
+  }
+.status-negative  {
+    @apply text-error px-2 py-1 rounded-sm text-xs font-medium;
+  }
+.status-neutral  {
+    @apply text-warning px-2 py-1 rounded-sm text-xs font-medium;
+  }
+  
+  /* Card Components */
+.card-elevated  {
+    @apply bg-card border border-border rounded-lg;
+  }
+  
+  .card-flat {
+    @apply bg-card border border-border rounded-lg;
+  }
+  
+  /* Focus States */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2;
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn var(--transition-default) ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp var(--transition-default) ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  /* Text Utilities */
+  .text-data {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  /* Shadow Utilities */
+  .shadow-soft {
+    box-shadow: var(--shadow-default);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Transition Utilities */
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+  
+  .transition-default {
+    transition: all var(--transition-default);
+  }
+  
+  .transition-slow {
+    transition: all var(--transition-slow);
+  }
+  
+  /* Layout Utilities */
+  .container-dashboard {
+    @apply max-w-7xl mx-auto px-6;
+  }
+  
+  .grid-dashboard {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+  
+  /* Professional spacing */
+  .space-professional > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  /* Data visualization utilities */
+  .chart-container {
+    @apply bg-card border border-border rounded-lg p-4;
+  }
+  
+  .metric-card {
+    @apply bg-card border border-border rounded-lg p-6 hover:shadow-soft transition-shadow duration-200;
+  }
+}
