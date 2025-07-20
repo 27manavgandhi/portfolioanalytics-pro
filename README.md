@@ -9,7 +9,14 @@
 
 > **A comprehensive, institutional-grade investment portfolio management platform with advanced analytics, risk management, and client reporting capabilities.**
 
-![Dashboard Preview](https://via.placeholder.com/1200x600/1976d2/ffffff?text=Investment+Portfolio+Analytics+Dashboard)
+<img width="1920" height="3845" alt="screencapture-portfolioanalytics-iu5mt4roz-27manavgandhis-projects-vercel-app-2025-07-20-22_01_34" src="https://github.com/user-attachments/assets/ee99c6a8-5906-4b56-85f1-3f51dc774848" />
+
+<img width="1920" height="912" alt="screencapture-portfolioanalytics-iu5mt4roz-27manavgandhis-projects-vercel-app-portfolio-management-2025-07-20-22_02_08" src="https://github.com/user-attachments/assets/182cb7c9-9d22-40f3-a669-c0ad2a552a18" />
+<img width="1920" height="912" alt="screencapture-portfolioanalytics-iu5mt4roz-27manavgandhis-projects-vercel-app-transactions-2025-07-20-22_03_09" src="https://github.com/user-attachments/assets/8a1c5f3f-eee3-46b5-b15e-0b540eab8284" />
+<img width="1920" height="1412" alt="screencapture-portfolioanalytics-iu5mt4roz-27manavgandhis-projects-vercel-app-research-2025-07-20-22_03_45" src="https://github.com/user-attachments/assets/5a54dc67-5004-4611-a324-608b9a02865c" />
+
+
+
 
 ## 🚀 Features
 
@@ -286,9 +293,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 Email: support@portfolioanalytics.com
-- 🐛 Issues: [GitHub Issues](https://github.com/27manavgandhi/investment-portfolio-dashboard/issues)
-- 📖 Documentation: [Wiki](https://github.com/27manavgandhi/investment-portfolio-dashboard/wiki)
+- 📧 Email: 27manavgandhi@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/27manavgandhi/portfolioanalytics-pro/issues)
+- 📖 Documentation: [Wiki](https://github.com/27manavgandhi/portfolioanalytics-pro/wiki)
 
 ## 🌟 Star History
 
